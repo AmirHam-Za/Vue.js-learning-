@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body>
+    <h4>Two Way Data Binding</h4> 
+
+    <div id="app">
+        <h3>Enter a number</h3>
+        <input type="text" @input ="handleInput" placeholder="one way data binding"><br><br>
+        <input :value="num" type="text" @input ="handleInput" placeholder="Two way data binding"><br><br>
+        
+        <input v-model.number="num" type="text" placeholder="Two way data binding with v-model directive">
+        <br>
+        <button @click="getDouble">Get Double</button>
+        <button @click="getSquare">Get Square</button>
+        <button @click="reset">Reset</button>
+         <!-- event mdifire er moto v-model er o modifier ache jemon ( v-model.number) ekhane number ekt modifire-->
+         <button @click="addTen">Add 10</button>
+        <hr>
+        <label for="">Enter Number :</label>{{ num }}
+        <br>
+        <label for="">Result :</label>{{ result }}
+
+        <!-- ekhane reset korar por sob kichui reset hocche kintu input field er man reset hocche na, karon ekhane input field ta 2 way binding kora hoyni, one way binding er moto kaj korche, orthat,input a jeti type kor ahocche seti js variable a amra set korchi, but js er variable er value ta change korle seti input fieldd er moddhe change hocche, two way binding korle eti kaaj korto -->
+        <!-- eti maanual 2 waaydata binding -->
+
+        <!-- vue.js aro simple 2 way data binding korte help kore, seti holo v-model  directive -->
+
+        <!-- two way binding bujhle custom component khub sohoje kora  jay -->
+
+       
+
+        
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>   

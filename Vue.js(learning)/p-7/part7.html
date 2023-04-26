@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body>
+    <h4>Event  Modifier</h4> 
+
+    <div id="app">
+        <form @submit.prevent = "handleFormSubmit">
+            <h3>Enter your name</h3>
+            <!-- some default event foe html tag(onkeyUp, onKeyDown,onInput) -->
+            <!-- <input type="text" @keyup.enter="handleKeyup"> -->
+            <input type="text" @keyup="handleKeyup">
+            <!-- .enter dile typer sathe sathe lekha gulo change hoyna. -->
+            <p>Welcome {{name}}</p>
+            <button type="submit">OK</button>
+        </form>
+        <hr>
+        <div 
+            class="card" @click="handleCardClick">
+            
+            <!-- html  div er o click event deoa jay, @click event &handleCardClick maddhome div er upor click event add korechi, ekhn @click.right click event add korle mouser right button click kkorle tkhn eti kaaj korbe -->
+            <button @click.stop = handleViweClick>View</button>
+            <!-- view e click korle ek e shathe card a o click hocche, kintu view te click kkorle shudhu view e click hobe, onno kono kichu te click hobena, sei jonno functon er moddhe e.stopPropagation(); function ti likhe dite hobe -->
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

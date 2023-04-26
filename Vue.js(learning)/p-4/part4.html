@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <script src="vue.global.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>Data & attribute binding</h1>
+    <h3>
+        <!-- string interpulition -->
+     welcome to    {{ tutorialInfo.name }} 
+    </h3>
+
+    <a href="{{ tutorialInfo.link }}">Youtube</a><br>
+    <!-- Attributr Binding -->
+    <a v-bind:href="tutorialInfo.link">Youtube</a><br>
+    <a :href="tutorialInfo.link">Youtube</a><br>
+
+    {{ htmlLink }}
+    <!-- v-html directive -->
+    <p v-html="htmlLink"></p>
+
+</div>    
+    <script src="app.js"></script>
+</body>
+</html>

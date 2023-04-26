@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body> 
+    <h3>Computed Properties</h3>
+
+    <div id="app">
+        <input type="text" placeholder="write your review" v-model="review">
+        <h3>Skills</h3>
+        <input type="text" v-model="newSkill.name">
+        <button @click="addSkill">Add</button>
+        <ul>
+            <!-- <li v-for="skill in skills">{{ skill }}</li> -->
+            <li v-for="
+            (skill, i) in skills" 
+            @click="removeSkill(i)" 
+            :key="skill.name
+            " >
+                <p>
+                    {{ i+1 }} {{ skill.name }} ({{ skill.experience }})
+                    <br>
+                    <!-- <input type="text" placeholder="remrk" @click.stop> -->
+
+
+                    <!--ei ongsho ti 12 no. theke neoa hoyeche 
+                        ekhane amader koto gulo skills ache, skills er upor click korl delete hoye jay, total koto gulo skill ache seti ekane dekhabo -->
+                </p>
+            </li>
+        </ul>
+        <!-- <h3>Total: {{ totalCount() }}</h3> -->
+
+        <h3>Total: {{ totalCount1 }}</h3>
+
+        <!-- <h3>Total: {{ skills.length }}</h3> -->
+        <!-- sorasori, without caling any method or property -->
+
+        <h3>Experienced</h3>
+        <ul>
+            <!-- <li v-for="skill in skills">{{ skill }}</li> -->
+            <li 
+            v-for="(skill, i) in experiencedSkills" 
+            :key="skill.name"
+            @click="removeSkill(i)" 
+            >
+                <p>
+                    {{ i+1 }} {{ skill.name }}-({{ skill.experience }})
+                
+                    <!-- <input type="text" placeholder="remrk" @click.stop> -->
+                </p>
+            </li>
+        </ul>
+       
+    </div>
+   
+    
+
+    <script src="app.js"></script>
+</body>
+</html> 

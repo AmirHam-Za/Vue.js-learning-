@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body> 
+    <h3>Conditional rendering</h3>
+
+    <div id="app">
+        <button @click="toggle">Show/Hide</button>
+        <div class="card" v-if="show"></div>
+        <!-- v-if DOM theke element k remove kore dey -->
+        <div class="card" v-show="show"></div>
+        <!-- v-show DOM theke element k remove kore na, just display:none kore dey -->
+
+        <ul>
+            <!-- <li v-for="skill in skills">{{ skill }}</li> -->
+            <li v-for="(skill, i) in skills" @click="removeSkill(i)" :key="skill.name" >
+                <p>
+                    {{ i+1 }} {{ skill.name }}-
+                    <span v-if="skill.experience < 4">(Beginner)</span>
+                    <span v-else-if="skill.experience < 6">Proficient()</span>
+                    <span v-else >(Expert)</span>
+                    <br>
+                    <!-- 12 number tutorial a v-for use kore shudhumattro experience er number dekhano hoyechilo, ekhane v-if conditioner mddhome nirdistho number range er jony nirdistho tag dekhano hoyeche -->
+
+                </p>
+            </li>
+        </ul>
+        
+       
+    </div>
+    
+
+    <script src="app.js"></script>
+</body>
+</html> 

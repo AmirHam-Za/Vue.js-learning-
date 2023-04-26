@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body> 
+    <h3>Computed Property vs Method vs Watcher</h3>
+
+    <div id="app">
+       
+       <input 
+       type="text" 
+       v-model="firstName" 
+       placeholder="Enter First Name"
+       >
+       <br><br>
+       <input 
+       type="text" 
+       v-model="lastName" 
+       placeholder="Enter Last Name"
+       >
+       <!-- <p>Your Full Name Is:{{ fullName }}</p> -->
+       <!-- computed property -->
+
+       <!-- <p>Your Full Name Is:{{ fullName() }}</p> -->
+       <!-- method property -->
+
+       <p>Your Full Name Is:{{ fullName }}</p>
+       <!--  watcher property -->
+
+       <!-- computed er khettre {{ fullName }}  
+         methods er khettre {{ fullName() }}  -->
+       
+    </div>
+   
+    
+<!-- amra etimoddhe Computed Property & Method & Watcher dekhechi
+ekhn eder moddhe shomporko, parthokko & knta kkhn kothay use hoy seta dekhbo
+-->
+    <script src="app.js"></script>
+</body>
+</html> 

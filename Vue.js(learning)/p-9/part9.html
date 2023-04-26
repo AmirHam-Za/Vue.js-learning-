@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body>
+    <h3>Class Binding</h3>
+
+    <div id="app">
+        <button 
+            class="button" 
+            :class="{active: activeClass =='red', bold:true}" @click="setClass('red')">
+            Red
+        </button>
+        <button 
+            class="button" 
+            :class="{active: activeClass =='green'}" 
+            @click="setClass('green')">
+            Green
+        </button>
+        <button 
+            class="button" 
+            :class="{active: activeClass =='blue'}" 
+            @click="setClass('blue')">
+            Blue
+        </button>
+        <button :class="['button','active']">Always Active</button>
+        <br><br>
+        <div :class="activeClass">
+            <!-- ekhn porjonto jeta kora hoyeche eta sei orthe class bingding na, normal attribute binding,karon class holo html er ekti attribute, -->
+            <!-- vue js class binding er jonno kichu option provide kore, sei khettre amra button er moddhy binding ta korbo -->
+
+
+
+            <!-- ekhane amra je je jinis dekhlam
+            1) Normal atribute er moddhe class binding(<div :class="activeClass">)
+            2)object style class binding using object's property value(:class="{active: activeClass =='red', bold:true}" )
+            3)normal class use korte pari style er jonno (class="button" )
+            4):class er moddhe object er poriborte array use korte pari(:class="['button','active']")
+            ei array er moddhy abar object use korte pari
+            -->
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

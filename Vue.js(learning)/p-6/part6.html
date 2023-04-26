@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <script src="vue.global.js"></script>
+</head>
+<body>
+<h4 style="color: red;">Event  and Method Arguments</h4> 
+
+<div id="app">
+    <!-- <p>Time: {{ getCurrentTime() }}</p>
+    <p>Time: {{ 1+1+5 }}</p><br> -->
+
+    <h2>Counter: {{ count }}</h2>
+    <!-- event binding -->
+    <button v-on:click="increase($event, 100)">Increment 1</button> &nbsp;
+    <button @click="decrease(1)">Decrement 1</button>
+    <br><br>
+    
+    <button v-on:click="increase(2)">Increment 2</button> &nbsp;
+    <button @click="decrease(2)">Decrement 2</button>
+<hr>
+<button @click="test">Test</button> &nbsp;
+<button @click="test()">Test()</button> &nbsp;
+<button @click="test($event)">Test($event)</button> &nbsp;
+    
+    
+</div> 
+<div>
+    
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>

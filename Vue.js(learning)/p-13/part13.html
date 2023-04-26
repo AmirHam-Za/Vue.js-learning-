@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue js3 bangla</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="vue.global.js"></script>
+</head>
+<body> 
+    <h3>List rendering of object and number</h3>
+
+    <div id="app">
+        <h3>About Me</h3>
+        <table>
+            <tr v-for="(value, key, i) in aboutMe">
+                <th>{{ i+1 }}</th>
+                <th>{{ key }}</th>
+                <td>{{ value }}</td>
+                <!-- object er moddhe loop chalano hoyeche -->
+
+            </tr>
+        </table>
+
+        <h3>Skills</h3>
+        <p>
+            <template v-for="skill in skills">{{ skill.name }}, </template>
+        </p>
+
+        <!-- amraa shadharonto html er bivinno tag/element jemon tr,li,div ittadi er moddhe loop chalay, kokhon o kokhon o amader html element charai comma diye diye value gulo ddekhate chai, sekhetre template tag use korte hoy -->
+
+        <div>
+            <p v-for="i in 9">{{ i }}</p>
+        </div>
+       
+    </div>
+    <!-- 1)object er moddhe loop chaliye value & key pete pari
+        2) number er moddhe loop chalate vriable er dorkar hoy na 
+    
+    -->
+    
+
+    <script src="app.js"></script>
+</body>
+</html> 
